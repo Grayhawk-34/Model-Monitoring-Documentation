@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ModelzInsights Model Monitoring Documentation">
+    <meta name="author" content="Grayhawk">
+    
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    
+    <title>Home - ModelzInsights</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/docco.min.css">
+        
+    
+    <link href="css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href=".">ModelzInsights</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="Authorization%20Setup/">Authorization Setup</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="specimen/">Specimen</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="Authorization%20Setup/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#welcome">Welcome</a></li>
+        <li class="first-level "><a href="#django-configuration-within-docker">Django Configuration (Within Docker)</a></li>
+        <li class="first-level "><a href="#infrastructure-setup">Infrastructure Setup</a></li>
+        <li class="first-level "><a href="#key-configuration-areas">Key Configuration Areas:</a></li>
+        <li class="first-level "><a href="#getting-started">Getting Started</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<div style="display: flex; align-items: center;">
+  <img src="../img/higher_resolution_img (2).jpg" alt="Alt text" style="width: 115px; margin-right: 20px; border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);">
+  <div style="font-family: Arial, sans-serif; font-size: 40px;">
+    <span>InsightMonitor</span>
+    <span style="color: gray;"> Documentation</span>
+  </div>
+</div>
+
+<p>&nbsp;</p>
+<h3 id="welcome">Welcome</h3>
+<p>Welcome to the documentation for <strong>InsightMonitor</strong>, a model monitoring platform designed for easy deployment within AWS environments. This documentation will:  </p>
+<ul>
+<li>Guide you through the setup process, configuration, and secure operation of the platform using <strong>Docker</strong> and AWS infrastructure.</li>
+<li>Detail the navigation components of the Model Monitoring app including setting up internal app configurations, creating projects, and managing the created assets.</li>
+<li>Document the tests being performed in the application.</li>
+</ul>
+<p><br></p>
+<h3 id="django-configuration-within-docker">Django Configuration (Within Docker)</h3>
+<p>The Django application is pre-configured and bundled within the Docker container. However, users can still customize key settings to match their specific environment using <strong>environment variables</strong>. This approach allows flexibility without modifying the container itself.</p>
+<p>Key configurable settings include:</p>
+<ul>
+<li><strong>Security Keys</strong>: Configure the secret key and other cryptographic elements securely.</li>
+<li><strong>Database Connections</strong>: Set up the database engine, user credentials, and connection details.</li>
+<li><strong>Allowed Hosts</strong>: Define the allowed hosts for your application to ensure secure operation.</li>
+</ul>
+<p>Environment variables enable you to configure these settings across different environments, such as development and production. Refer to the <strong>Django Setup</strong> section for more detailed instructions on the required environment variables and how to customize your setup.</p>
+<p>In addition to configuration, the platform includes:</p>
+<ul>
+<li><strong>Logging &amp; Debugging</strong>: Pre-configured logging to track errors and debugging information in both development and production environments.</li>
+<li><strong>Security Measures</strong>: Built-in security configurations, including <strong>end-to-end encryption</strong>, to protect sensitive data and ensure compliance with regulations like <strong>PHI</strong>.</li>
+</ul>
+<h3 id="infrastructure-setup">Infrastructure Setup</h3>
+<p>For infrastructure deployment, <strong>AWS CloudFormation</strong> can be used to automate the setup of resources like VPC, EC2 instances, S3 buckets, and more. Templates and scripts are provided to assist with the setup.  </p>
+<p>If multi-cloud support is considered in the future, <strong>Terraform</strong> offers greater flexibility for deploying across different cloud platforms. However, this documentation focuses on AWS CloudFormation to manage AWS infrastructure.  </p>
+<h3 id="key-configuration-areas">Key Configuration Areas:</h3>
+<ul>
+<li><strong>Authentication &amp; Authorization</strong>: Configure user roles, permissions, and policies to ensure security, with support for integrating existing systems like <strong>Azure AD</strong> or <strong>LDAP</strong>.  </li>
+<li><strong>Secrets Management</strong>: Secure access to secrets using <strong>AWS Secrets Manager</strong> or similar tools, with a focus on role-based access control and policy management.  </li>
+<li><strong>NGINX Configuration</strong>: Set up <strong>NGINX</strong> as a reverse proxy for secure traffic routing. Templates are available to help you adapt the configuration to your security standards.  </li>
+<li><strong>Performance Optimization</strong>: The platform is optimized for normal monitoring tasks using <strong>Polars</strong> to efficiently handle datasets within memory limits. For larger-than-memory monitoring, <strong>Dask</strong> or <strong>DuckDB</strong> can be utilized to scale the platform.  </li>
+<li><strong>Security Protocols</strong>: The platform provides <strong>end-to-end encryption</strong> for sensitive data, including configurations for <strong>PHI</strong> (Protected Health Information) compliance. Encryption can be globally enforced or configured on a per-project basis.  </li>
+</ul>
+<h3 id="getting-started">Getting Started</h3>
+<p>For new users, we recommend starting with the <strong>Quickstart Guide</strong> for an overview of basic setup and configuration. This includes setting up the Docker container, configuring environment variables, and deploying the application. Advanced topics such as <strong>custom authentication integration</strong>, <strong>NGINX configuration</strong>, and <strong>role-based access control</strong> can be found in their respective sections.</p>
+<p>Refer to the side navigation for detailed instructions on each topic.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Cinder is licensed under the <a href='hhttps://github.com/Grayhawk-34/Model_Monitoring_Documentation/blob/master/LICENSE.md'>MIT license</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "."</script>
+    
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-10-02 18:19:36.270217+00:00
+-->
