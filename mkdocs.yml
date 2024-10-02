@@ -1,0 +1,25 @@
+site_name: ModelzInsights
+site_url: 
+site_author: Grayhawk
+site_description: "ModelzInsights Model Monitoring Documentation"
+repo_url: 
+copyright: "Cinder is licensed under the <a href='hhttps://github.com/Grayhawk-34/Model_Monitoring_Documentation/blob/master/LICENSE.md'>MIT license</a>"
+
+theme:
+  name: null
+  custom_dir: cinder
+  colorscheme: docco
+  highlightjs: true
+
+extra_css:
+  - css/mystyle.css
+
+nav:
+  - Home: index.md
+  - Authorization Setup: Authorization Setup.md
+  - Specimen: specimen.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+

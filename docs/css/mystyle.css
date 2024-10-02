@@ -1,0 +1,32 @@
+h1 {
+    font-size: 40px ;
+    color: red;
+}
+
+/* Increase the width of the main content area */
+.md-main__inner {
+    max-width: none !important; /* Remove any limitations on max width */
+    width: 90% !important; /* Makes it responsive while taking more width */
+    margin: 0 auto !important; /* Center the content */
+}
+
+/* Move the primary sidebar */
+.md-sidebar--primary {
+    left: 0 !important;
+    width: 250px !important; /* Adjust this as needed */
+}
+
+/* Adjust the secondary sidebar */
+.md-sidebar--secondary {
+    right: 0 !important;
+    width: 250px !important; /* Adjust width */
+    margin-left: 0 !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+}
+
+/* Ensure the body is using full width */
+.md-container {
+    max-width: 100% !important;
+    width: 100% !important;
+}
